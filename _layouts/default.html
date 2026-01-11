@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
 
   <!-- Tailwind CDN -->
@@ -15,15 +16,63 @@
       scroll-behavior: smooth;
     }
     
-    /* Mobile-specific adjustments */
-    @media (max-width: 768px) {
-      /* Ensure proper viewport scaling */
+    /* iPhone and small mobile specific adjustments */
+    @media (max-width: 640px) {
+      /* Force larger text sizes for small screens */
       body {
+        font-size: 18px !important;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
       }
       
-      /* Better touch targets for mobile */
+      /* Hero section text */
+      .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.25rem !important;
+        line-height: 1.4 !important;
+      }
+      
+      /* Section headings */
+      .section-title {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+      }
+      
+      /* Feature headings */
+      .feature-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+      }
+      
+      /* Body text */
+      .body-text {
+        font-size: 1.125rem !important;
+        line-height: 1.6 !important;
+      }
+      
+      /* Testimonial text */
+      .testimonial-text {
+        font-size: 1.125rem !important;
+        line-height: 1.6 !important;
+      }
+      
+      /* Gallery overlay text */
+      .gallery-text {
+        font-size: 1.25rem !important;
+        line-height: 1.3 !important;
+      }
+      
+      /* Contact text */
+      .contact-text {
+        font-size: 1.125rem !important;
+        line-height: 1.4 !important;
+      }
+      
+      /* Better touch targets */
       button, a {
         min-height: 44px;
         min-width: 44px;
@@ -34,10 +83,14 @@
         max-width: 100%;
         box-sizing: border-box;
       }
-      
-      /* Better spacing for mobile */
-      .section-padding {
-        padding: 2rem 1rem;
+    }
+    
+    /* Medium mobile adjustments */
+    @media (min-width: 641px) and (max-width: 768px) {
+      body {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
       }
     }
     
